@@ -1,0 +1,72 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+ * {
+    padding: 0;
+    margin: 0;
+  }
+  
+  body {
+    font-family:'Noto Sans JP', sans-serif;
+  }
+  
+.right{
+    margin-top: 4vh;
+}
+
+.left{
+    margin-top: 4vh;
+}
+
+  header {
+    margin-bottom: 100px;
+    background-color: #ffff;
+    height: 80px;
+    font-weight: bold;
+    text-align: center;
+  }
+
+  .title{
+    justify-content: center;
+    position: left 20px;
+  }
+
+  h1{
+    font-size: 60px;
+    display: inline-block;
+    background: linear-gradient(180deg,#94fbfb,#59ebeb 50%, #24d2d2 80%);
+    background: -webkit-linear-gradient(0deg, #02D6D6);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .header-list {
+    justify-content: space-around;
+    display: flex;
+  }
+
+  header ul {
+    display: flex;
+    margin: 0 auto;
+  }
+
+  header li {
+    list-style: none;
+    font-display: flex;
+    position: absolute;
+  }
+
+  

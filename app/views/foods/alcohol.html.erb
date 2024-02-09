@@ -1,0 +1,28 @@
+<% @foods.each do |t| %>
+    <div class="tweet">
+      <%= t.name %>
+      <%= t.genre %>
+      <p>
+      <% if user_signed_in? %>
+      <% if current_user.already_liked?(t) %>
+          <%= link_to food_like_path(id: t.id, food_id: t.id), method: :delete do %>
+            <i class="fas fa-heart"></i><%= t.likes.count %>
+          <% end %>
+      <% else %>
+          <%= link_to food_likes_path(id: t.id, food_id: t.id), method: :food do %>
+            <i class="far fa-heart"></i><%= t.likes.count %>
+          <% end %>
+      <% end %>
+    <% else %>
+        <i class="far fa-heart"></i><%= t.likes.count %>
+    <% end %>
+      </p>
+      <%= link_to "詳細へ", food_path(t.id) %>
+      <% if user_signed_in? && current_user.id == t.user_id %>
+      <%= link_to "編集する", edit_food_path(t.id) %>
+      <%= button_to "削除する", food_path(t.id), method: :delete %>
+      <% end %>
+      
+    </div>
+<% end %>
+<%= link_to "Back", foods_menu_path %>

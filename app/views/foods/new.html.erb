@@ -1,0 +1,36 @@
+<h1>Tokyo disney sea Food</h1>
+<h3>新規投稿ページ</h3>
+
+<%= form_for @food do |f| %>
+  
+    <div class="field">
+      <%= f.label :ショップ名 %>
+      <%= f.text_field :name, :size => 30 %>
+    </div>
+
+  <div class="field">
+    <%= f.label :エリアを選択  %>
+    <%= f.select :area, 
+    [["メディテレーニアンハーバー", "medi"], 
+    ["アメリカンウォーターフロント", "ame"], 
+    ["ポートディスカバリー", "port"],
+    ["ロストリバーデルタ", "lost"],
+    ["アラビアンコースト", "arab"],
+    ["マーメイドラグーン", "mermaid"],
+    ["ミステリアスアイランド", "mystery"]], include_blank: "選択して下さい" %>
+  </div>
+
+  <div class="field">
+    <%= f.label :メニュージャンルを入力 %>
+    <%= f.text_field :genre, :size => 30 %>
+  </div>
+
+  <div class="field">
+    <%= f.label :詳細を入力 %>
+    <%= f.text_area :about, :size => "30x2" %>
+  </div>
+
+  <%= f.submit "投稿する" %>
+<% end %>
+
+<%= link_to "一覧に戻る", foods_path %>

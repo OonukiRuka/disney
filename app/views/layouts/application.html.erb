@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Disney sea フード紹介</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <script src="https://kit.fontawesome.com/aa54e06afa.js"  crossorigin="anonymous"></script> 
+     
+
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%#= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+<header>
+  <div class="header-list">
+        <div class="left"
+        <%= button_to 'HOME', foods_top_path, method: :get %>
+        </div>
+      
+        <h1>Disney sea フード紹介</h1>
+      
+      
+        <div class="right">
+        <% if user_signed_in? %>          
+        <%= button_to 'ログアウト', destroy_user_session_path, method: :delete %>
+        <% else %>
+        <%= link_to "ログイン", new_user_session_path %>
+        <% end %>
+        </div>
+        
+        
+  </div>
+</header>
+
+  <body>
+    <%= yield %>
+  </body>
+</html>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap" rel="stylesheet">
