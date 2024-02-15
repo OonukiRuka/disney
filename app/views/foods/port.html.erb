@@ -4,6 +4,7 @@
   <% @foods.each do |t| %>
     <div class="tweet">
     <% if t.area == "port"%>
+    <%= image_tag t.image_url, size: "250x200" if t.image? %><br>
     <p><%= t.name %></p>
     <p><%= t.genre %></p>
     <p>

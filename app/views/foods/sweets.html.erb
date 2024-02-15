@@ -1,5 +1,6 @@
 <% @foods.each do |t| %>
     <div class="tweet">
+    <%= image_tag t.image_url, size: "250x200" if t.image? %><br>
       <%= t.name %>
       <%= t.genre %>
       <p>

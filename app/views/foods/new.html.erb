@@ -1,12 +1,16 @@
-<h1>Tokyo disney sea Food</h1>
 <h3>新規投稿ページ</h3>
 
 <%= form_for @food do |f| %>
   
-    <div class="field">
+  <div class="field">
       <%= f.label :ショップ名 %>
       <%= f.text_field :name, :size => 30 %>
-    </div>
+  </div>
+
+  <div class="field">
+    <%= f.label :写真を追加 %>
+    <%= f.file_field :image %>
+  </div>
 
   <div class="field">
     <%= f.label :エリアを選択  %>

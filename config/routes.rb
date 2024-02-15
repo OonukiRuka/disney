@@ -27,7 +27,7 @@ Rails.application.routes.draw do
   get 'foods/:food_id/likes' => 'likes#create'
   get 'foods/:food_id/likes/:id' => 'likes#destroy'
   get 'foods/login' => 'foods#login'
-  
+
   resources :foods do
     resources :likes, only: [:create, :destroy]
     resources :comments, only: [:create]

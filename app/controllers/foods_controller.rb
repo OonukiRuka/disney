@@ -192,7 +192,7 @@ class FoodsController < ApplicationController
       end
 
       def alcohol
-        @foods = Food.where("genre LIKE ?", '%' + "アイスクリーム" + '%')
+        @foods = Food.where("genre LIKE ?", '%' + "アルコール" + '%')
       end
 
       def login
@@ -201,7 +201,7 @@ class FoodsController < ApplicationController
     
       private
       def food_params
-        params.require(:food).permit(:name, :genre, :genre2, :area, :about, )
+        params.require(:food).permit(:name, :genre, :genre2, :area, :about, :image )
       end
 
     end

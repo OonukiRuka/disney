@@ -1,9 +1,9 @@
-<h1>Disney sea food紹介</h1>
 <h3>ミステリアスアイランド</h3>
 <div class="tweets-container">
   <% @foods.each do |t| %>
     <div class="tweet">
     <% if t.area =="mystery"%>
+    <%= image_tag t.image_url, size: "250x200" if t.image? %><br>
     <p>
     <% if user_signed_in? %>
     <% if current_user.already_liked?(t) %>

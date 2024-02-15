@@ -21,6 +21,7 @@
   
   body {
     font-family:'Noto Sans JP', sans-serif;
+    background-color:#fafafa;
   }
   
 .right{
@@ -32,11 +33,12 @@
 }
 
   header {
-    margin-bottom: 100px;
-    background-color: #ffff;
+    margin-bottom: 20px;
+    background-color:   #fafafa;
     height: 80px;
     font-weight: bold;
     text-align: center;
+    padding-bottom: 3vh;
   }
 
   .title{

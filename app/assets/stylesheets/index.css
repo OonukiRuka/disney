@@ -1,0 +1,94 @@
+body{
+    background-color:   #fafafa;
+}
+.bg-medi {
+    position:relative;
+    display: flex;
+    background-image: url("medi.jpg");
+    background-size: cover;
+    height: 550px;
+    width: 900px;
+    margin-left: 200px;   
+}
+
+.about-medi{
+    position:absolute;
+    top:700px;
+    left:500px;
+    width: fit-content;
+    text-align: center;
+    font-size: 28px;
+    font-family:'Noto Sans JP', sans-serif;
+    background-color: #ffffffd5;
+    border-radius: 5%;
+    padding:10px;
+}
+
+.title-medi{	
+    width: fit-content;
+	text-align: center;
+	vertical-align: middle;
+	padding: 10px;
+	margin: auto;
+	font-weight: bold;
+	border: 1px solid #ffffffc5;
+	color: #ffff;
+    background-color: #945a30;
+    font-size: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 5vh;
+}
+
+.foods-container-medi{
+    margin-top:180px;
+    display: flex;
+    flex-wrap: wrap; 
+    justify-content: space-around;
+}
+
+.image-medi{
+    justify-content: center;
+    box-shadow: 0 0 30px #ccc ;
+    height: 250px;
+}
+
+.shop-medi{
+    font-size: 18px;
+    border-bottom: 1px solid rgba(160, 157, 157, 0.77);
+}
+
+.genre-medi{
+    font-size: 15px;
+}
+
+.tweet-medi{
+    border: 1px solid rgba(160, 157, 157, 0.77);
+    width:350px;
+    flex-wrap: wrap;
+    margin:60px;
+    flex-direction: row;
+    padding: 8px;
+    height:380px;
+}
+
+.show-medi{
+    display: inline-block;
+    position: relative;
+    background:#ffff ; /* 背景色 */
+    border: 2px solid #4D9BC1;
+    color: #4D9BC1; /* 文字色 */
+    text-decoration: none;
+    transition-duration: 0.3s;
+    padding:2px;
+    font-size:15px;
+}
+.show-medi:hover {
+    background: #4D9BC1; /* 背景色 */
+    color: #ffff; /* 文字色 */
+  }
+
+.button-medi{
+    display:flex;
+}
