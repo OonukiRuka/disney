@@ -1,5 +1,5 @@
 class FoodsController < ApplicationController
-  before_action :authenticate_user!
+
 
     def index
         @foods = Food.all
@@ -51,7 +51,7 @@ class FoodsController < ApplicationController
       def destroy
         food = Food.find(params[:id])
         food.destroy
-        redirect_to action: :index
+        redirect_to action: :top
       end
 
       def top

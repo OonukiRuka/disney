@@ -1,16 +1,15 @@
 body{
     background-color:   #fafafa;
-    animation: fadein 3s forwards;
 }
-.bg-medi {
-    background-image: url("medi.jpg");
+.bg-ame {
+    background-image: url("ame.jpg");
     background-size: cover;
     height: 800px;
     width: 1450px;
     margin: auto;
 }
 
-.about-medi{
+.about-ame{
     margin-top: 50px;
     text-align: center;
     font-size: 28px;
@@ -19,39 +18,39 @@ body{
     justify-content: center;
 }
 
-.title-medi{	
+.title-ame{	
 	vertical-align: middle;
 	margin: auto;
 	padding: 10px;
 	color: #ffff;
     font-size: 70px;
     display: flex;
-    text-shadow:2px 2px 3px #945a30ca;
+    text-shadow:2px 2px 3px #c3267aca;
 }
 
-.foods-container-medi{
+.foods-container-ame{
     margin-top:30px;
     display: flex;
     flex-wrap: wrap; 
     justify-content: space-around;
 }
 
-.image-medi{
+.image-ame{
     justify-content: center;
     box-shadow: 0 0 30px #ccc ;
     height: 250px;
 }
 
-.shop-medi{
+.shop-ame{
     font-size: 18px;
     border-bottom: 1px solid rgba(160, 157, 157, 0.77);
 }
 
-.genre-medi{
+.genre-ame{
     font-size: 15px;
 }
 
-.tweet-medi{
+.tweet-ame{
     border: 1px solid rgba(160, 157, 157, 0.77);
     width:350px;
     flex-wrap: wrap;
@@ -61,8 +60,7 @@ body{
     height:380px;
 }
 
-.show-medi{
-    margin-right:8px;
+.show-ame{
     display: inline-block;
     position: relative;
     background:#ffff ; /* 背景色 */
@@ -74,19 +72,13 @@ body{
     font-size:15px;
 }
 
-.show-medi:hover {
-    margin-right:8px;
-    background: #4d9ac1ba; /* 背景色 */
+.show-ame:hover {
+    background: #4D9BC1; /* 背景色 */
     color: #ffff; /* 文字色 */
   }
 
-.button-medi{
+.button-ame{
     display:flex;
-    text-decoration: none;
-}
-
-a{
-    text-decoration: none; 
 }
 
 .like-medi{

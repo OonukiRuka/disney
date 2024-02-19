@@ -1,37 +1,65 @@
-<h1>Disney sea food紹介</h1>
-<h3>アメリカンウォーターフロント</h3>
-<div class="tweets-container">
+<body>
+<div class ="bg-ame">
+  <div class="title-ame">
+    アメリカンウォーターフロント
+  </div>
+</div>
+
+<div class ="about-ame">
+  ここ20世紀初頭のアメリカをモチーフにしたアメリカンウォーターフロントでは、
+  <br>趣の異なる2つの港町の雰囲気を楽しむことができます。 
+  <br>活気溢れるニューヨークの街並みには、高架鉄道や自動車が行き交い、
+  <br>素朴な田舎町の漁村であるケープコッドでは、美しい景色を眺めながらゆったりと過ごすことができます。
+</div>
+
+<div class="foods-container-ame">
   <% @foods.each do |t| %>
-    <% if t.area == "ame" %>
-    <div class="tweet">
-    <%= image_tag t.image_url, size: "250x200" if t.image? %><br>
-      <p><%= t.name %></p>
-      <p><%= t.genre %></p>
+    <% if t.area == "アメリカンウォーターフロント" %>
+      <div class="tweet-ame">
+        <div class="image-ame">
+          <%= image_tag t.image_url, size: "350x250" if t.image? %><br>
+        </div>
+        <div class="shop-ame">
+          </b><%= t.name %><br>
+        </div>
+        <div class ="genre-ame">
+          </b><%= t.genre %><br>
+        </div>
+      
+    <div class="button-ame">
+    <%= button_to ">詳細へ", food_path(t.id), method: :get, class: :"show-ame"%>
+      <% if user_signed_in? && current_user.id == t.user_id %>
       <p>
       <% if user_signed_in? %>
       <% if current_user.already_liked?(t) %>
           <%= link_to food_like_path(id: t.id, food_id: t.id), method: :delete do %>
-            <i class="fas fa-heart"></i><%= t.likes.count %>
+            <i class="fas fa-heart fa-2x" style="color:#f5b2b2;"></i>
+            <div class ="like-medi">
+              <%= t.likes.count %>
+            </div>
           <% end %>
       <% else %>
           <%= link_to food_likes_path(id: t.id, food_id: t.id), method: :food do %>
-            <i class="far fa-heart"></i><%= t.likes.count %>
+            <i class="far fa-heart fa-2x"></i>
+            <div class ="like-medi">
+              <%= t.likes.count %>
+            </div>
           <% end %>
       <% end %>
     <% else %>
         <i class="far fa-heart"></i><%= t.likes.count %>
     <% end %>
-      </p>
-      <%= link_to "詳細へ", food_path(t.id) %>
-      <% if user_signed_in? && current_user.id == t.user_id %>
-          <%= link_to "編集する", edit_food_path(t.id) %>
+    </p>
+          <%= button_to "編集する", edit_food_path(t.id), method: :get %>
           <%= button_to "削除する", food_path(t.id), method: :delete %>
-          
-      <% end %>  
-      </div>
-    <% end %>
+          <% end %>
+          </div>  
+    </div>
   <% end %>
-
+<% end %>
 </div>
-<%= link_to "Back", foods_place_path %>
+
+<button type="button" onclick="history.back()"><戻る</button>
 <%= link_to "新規投稿へ", new_food_path %>
+
+</body>

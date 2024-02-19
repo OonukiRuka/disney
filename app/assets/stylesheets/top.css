@@ -1,5 +1,5 @@
-body{
-    background-color:#fafafa ;
+.body{
+    animation: fadein 3s forwards;
 }
 .bg{
     display: flex;
@@ -11,6 +11,12 @@ body{
     opacity: 70%;
     justify-content: center;
     align-items: center;
+    margin-top: 100px;
+}
+
+@keyframes fadein {
+	0% {opacity: 0}
+	100% {opacity: 1}
 }
 
 .about{
@@ -21,11 +27,12 @@ body{
     font-family:'Noto Sans JP', sans-serif;
     color:black;
     background-color: #ffffff90;
-
+    box-shadow: 0 0 1px #06a1b3;
 }
 
 .map{
-    background-image: url("map.jpg");
+    background-color: white;
+    background-image: url("map.png");
     background-size: cover;
     height: 800px;
     width: 1137px;
@@ -37,11 +44,12 @@ body{
 
 
 .area{
+    font-family: "Zen Antique Soft", serif;
+    font-weight: 200;
+    font-style: normal;
     text-align: center;
     margin: 0 auto;
-    border: #C9C9C9;
 }
-
 
 .medi {
     position: absolute;
@@ -168,7 +176,7 @@ body{
     z-index: 10000;
 }
 .mermaid {
-    position: relative;
+    position: absolute;
     top: 230px;
     left: 650px;
 	display: flex;
@@ -193,8 +201,8 @@ body{
 }
 
 .mystery {
-    position: relative;
-    top: 300px;
+    position: absolute;
+    top: 330px;
     left: 500px;
 	display: flex;
     display: inline-block;
@@ -220,27 +228,27 @@ body{
 .menu{
     text-align: center;
     margin: 0 auto;
+    font-family: "Zen Antique Soft", serif;
+    font-weight: 200;
 }
 
 
 .border1{
-    border: solid 0.5px #C9C9C9;
+    border-bottom: 2px solid black;
     font-size:50px;
-    font-family:'Noto Sans JP', sans-serif;
-    color:rgb(49, 241, 209);
+    color:black;
     display: inline-block;
-    margin-top: 13%;
+    margin-top: 6%;
     margin-bottom: 3%;
     padding: 0.5%;
 }
 
 .border2{
-    border: solid 0.5px #C9C9C9;
+    border-bottom: 2px solid black;
     font-size:50px;
-    font-family:'Noto Sans JP', sans-serif;
-    color:rgb(49, 241, 209);
+    color: black;
     display: inline-block;
-    margin-top: 13%;
+    margin-top: 6%;
     margin-bottom: 3%;
     padding: 0.5%;
 }

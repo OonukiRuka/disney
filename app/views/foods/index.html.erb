@@ -1,21 +1,19 @@
 <body>
-<div class="title-medi">
-  メディテレーニアンハーバー
-</div>
 <div class="bg-medi">
-</div>
-<div class="about-medi-box">
-  <div class="about-medi">
-    東京ディズニーシーの玄関口であるメディテレーニアンハーバーは、
-    <br>南ヨーロッパの古き良き港町をイメージしています。
-    <br>ここではヴェネツィアン・ゴンドラや蒸気船などに乗って
-    <br>魅力的な運河を楽しめます！夜にはライトアップにより
-    <br>ロマンティックな雰囲気も味わえます。
+  <div class="title-medi">
+    メディテレーニアンハーバー
   </div>
+</div>
+
+<div class="about-medi">
+  東京ディズニーシーの玄関口であるメディテレーニアンハーバーは南ヨーロッパの港町をイメージしています。
+  <br>ここではヴェネツィアン・ゴンドラや蒸気船などに乗って魅力的な運河を楽しむことができます！
+  <br>夜にはライトアップによりロマンティックな雰囲気を味わえます。
+</div>
 
 <div class="foods-container-medi">
   <% @foods.each do |t| %>
-    <% if t.area == "medi" %>
+    <% if t.area == "メディテレーニアンハーバー" %>
         <div class="tweet-medi">
           <div class = "image-medi">
             <%= image_tag t.image_url, size: "350x250" if t.image? %><br>
@@ -25,34 +23,42 @@
           </div>
           <div class="genre-medi">
             </b> <%= t.genre %><br> 
-      </div>
-        <p>
-          <% if user_signed_in? %>
-            <% if current_user.already_liked?(t) %>
-            <%= link_to food_like_path(id: t.id, food_id: t.id), method: :delete do %>
-              <i class="fas fa-heart"></i><%= t.likes.count %>
-            <% end %>
-          <% else %>
-            <%= link_to food_likes_path(id: t.id, food_id: t.id), method: :food do %>
+          </div>
+      
+        
+          <div class="button-medi">
+            <%= button_to ">詳細へ", food_path(t.id), method: :get, class: :"show-medi"%>
+            <p>
+            <% if user_signed_in? %>
+              <% if current_user.already_liked?(t) %>
+              <%= link_to food_like_path(id: t.id, food_id: t.id), method: :delete do %>
+                <i class="fas fa-heart fa-2x" style="color:#f5b2b2;"></i>
+                <div class ="like-medi">
+                <%= t.likes.count %>
+                </div>
+              <% end %>
+              <% else %>
+                <%= link_to food_likes_path(id: t.id, food_id: t.id), method: :food do %>
+                  <i class="far fa-heart fa-2x"></i>
+                  <div class ="like-medi">
+                <%= t.likes.count %>
+                </div>
+                <% end %>
+              <% end %>
+            <% else %>
               <i class="far fa-heart"></i><%= t.likes.count %>
             <% end %>
-          <% end %>
-          <% else %>
-            <i class="far fa-heart"></i><%= t.likes.count %>
-          <% end %>
-        </p>
-        <div class="button-medi">
-          <%= button_to ">詳細へ", food_path(t.id), method: :get, class: :"show-medi"%>
-          <% if user_signed_in? && current_user.id == t.user_id %>
-            <%= button_to "編集する", edit_food_path(t.id), method: :get %>
-            <%= button_to "削除する", food_path(t.id), method: :delete %>
-        </div>
-        <% end %>  
+          </p>
+            <% if user_signed_in? && current_user.id == t.user_id %>
+              <%= button_to "編集する", edit_food_path(t.id), method: :get %>
+              <%= button_to "削除する", food_path(t.id), method: :delete %>
+            <% end %>
+            </div>  
       </div>
     <% end %>
   <% end %>
 </div>
 
-<%= link_to "Back", foods_place_path %>
+<button type="button" onclick="history.back()"><戻る</button>
 <%= link_to "新規投稿へ", new_food_path %>
 </body>

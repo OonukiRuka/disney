@@ -1,32 +1,17 @@
-<h1>Disney sea food紹介</h1>
-<h3>場所一覧</h3>
-    
-    <div>
-    <%= link_to "メディテレーニアンハーバー", foods_path %>
+<ul id="2" class="area">
+    <div class="border1">
+      Area list
     </div>
+</div>
 
-    <div>
-    <%= link_to "アメリカンウォーターフロント", foods_ame_path %>
-    </div>
+<div class="map">
+<%= button_to "メディテレーニアンハーバー", foods_path , method: :get, class:"medi" %>
+<%= button_to "アメリカンウォーターフロント", foods_ame_path, method: :get, class:"ame" %>
+<%= button_to "ポートディスカバリー", foods_port_path, method: :get, class:"port" %>
+<%= button_to "ロストリバーデルタ", foods_lost_path, method: :get, class:"lost" %>
+<%= button_to "アラビアンコースト", foods_arab_path, method: :get, class:"arab" %>
+<%= button_to "マーメイドラグーン", foods_mermaid_path, method: :get, class:"mermaid" %>
+<%= button_to "ミステリアスアイランド", foods_mystery_path, method: :get, class:"mystery" %>
+</div>
 
-    <div>
-    <%= link_to "ポートディスカバリー", foods_port_path %>
-    </div>
-
-    <div>
-    <%= link_to "ロストリバーデルタ", foods_lost_path %>
-    </div>
-
-    <div>
-    <%= link_to "アラビアンコースト", foods_arab_path %>
-    </div>
-
-    <div>
-    <%= link_to "マーメイドラグーン", foods_mermaid_path %>
-    </div>
-
-    <div>
-    <%= link_to "ミステリアスアイランド", foods_mystery_path %>
-    </div>
-
-    <%= link_to "Back", foods_top_path %>
+<button type="button" onclick="history.back()"><戻る</button>

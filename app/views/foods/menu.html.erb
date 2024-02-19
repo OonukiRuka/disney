@@ -1,51 +1,62 @@
-<h1>Disney sea food紹介</h1>
-<h3>メニュー一覧</h3>
-<div>
-    <%= link_to "肉料理", foods_niku_path %>
+<ul id="3" class="menu">
+<div class="border2">
+    Menu list
+</div>
+</div>
+<div class="box1">
+<div class="niku">
+    <%= button_to "肉料理", foods_niku_path, method: :get, class:"t-niku" %>
 </div>
 
-<div>
-    <%= link_to "魚料理", foods_sakana_path %>
+<div class="sakana">
+    <%= button_to "魚料理", foods_sakana_path, method: :get, class:"t-sakana" %>
 </div>
 
-<div>
-    <%= link_to "パスタ", foods_pasta_path %>
+<div class="pasta">
+    <%= button_to "パスタ", foods_pasta_path, method: :get, class:"t-pasta" %>
+</div>
 </div>
 
-<div>
-    <%= link_to "サンドウィッチ/ハンバーガー", foods_burger_path %>
+<div class="box2">
+<div class="burger">
+    <%= button_to "サンドウィッチ/ハンバーガー", foods_burger_path, method: :get, class:"t-burger" %>
 </div>
 
-<div>
-    <%= link_to "パン/ペイストリー", foods_bread_path %>
+<div class="bread">
+    <%= button_to "パン/ペイストリー", foods_bread_path, method: :get, class:"t-bread" %>
 </div>
 
-<div>
-    <%= link_to "カレー", foods_curry_path %>
+<div class="curry">
+    <%= button_to "カレー", foods_curry_path, method: :get, class:"t-curry" %>
+</div>
 </div>
 
-<div>
-    <%= link_to "ピザ", foods_pizza_path %>
+<div class="box3">
+<div class="pizza">
+    <%= button_to "ピザ", foods_pizza_path, method: :get, class:"t-pizza" %>
 </div>
 
-<div>
-    <%= link_to "ワンハンドメニュー", foods_hand_path %>
+<div class="hand">
+    <%= button_to "ワンハンドメニュー", foods_hand_path, method: :get, class:"t-hand" %>
 </div>
 
-<div>
-    <%= link_to "ポップコーン", foods_pop_path %>
+<div class="pop">
+    <%= button_to "ポップコーン", foods_pop_path, method: :get, class:"t-pop" %>
+</div>
 </div>
 
-<div>
-    <%= link_to "スウィーツ", foods_sweets_path %>
+<div class="box4">
+<div class="sweets">
+    <%= button_to "スウィーツ", foods_sweets_path, method: :get, class:"t-sweets" %>
 </div>
 
-<div>
-    <%= link_to "アイスクリーム", foods_ice_path %>
+<div class="ice">
+    <%= button_to "アイスクリーム", foods_ice_path, method: :get, class:"t-ice" %>
 </div>
 
-<div>
-    <%= link_to "アルコール", foods_alcohol_path %>
+<div class="alcohol">
+    <%= button_to "アルコール", foods_alcohol_path, method: :get, class:"t-alcohol" %>
 </div>
 
-<%= link_to "Back", foods_top_path %>
+</div>
+<button type="button" onclick="history.back()"><戻る</button>

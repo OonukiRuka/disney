@@ -1,35 +1,63 @@
-<h3>ミステリアスアイランド</h3>
-<div class="tweets-container">
-  <% @foods.each do |t| %>
-    <div class="tweet">
-    <% if t.area =="mystery"%>
-    <%= image_tag t.image_url, size: "250x200" if t.image? %><br>
-    <p>
-    <% if user_signed_in? %>
-    <% if current_user.already_liked?(t) %>
-        <%= link_to food_like_path(id: t.id, food_id: t.id), method: :delete do %>
-          <i class="fas fa-heart"></i><%= t.likes.count %>
-        <% end %>
-    <% else %>
-        <%= link_to food_likes_path(id: t.id, food_id: t.id), method: :food do %>
-          <i class="far fa-heart"></i><%= t.likes.count %>
-        <% end %>
-    <% end %>
-  <% else %>
-      <i class="far fa-heart"></i><%= t.likes.count %>
-  <% end %>
-    </p>
-    <p><%= t.name %></p>
-    <p><%= t.genre %></p>
-    <%= link_to "詳細へ", food_path(t.id) %>
-    <% if user_signed_in? && current_user.id == t.user_id %>
-        <%= link_to "編集する", edit_food_path(t.id) %>
-        <%= button_to "削除する", food_path(t.id), method: :delete %>
-        
-    <% end %>  
-    </div>
-  <% end %>
-<% end %>
+<body>
+<div class="bg-mystery">
+  <div class="title-mystery">
+    ミステリアスアイランド
+  </div>
 </div>
-<%= link_to "Back", foods_place_path %>
+
+<div class="about-mystery">
+謎の天才科学者ネモ船長が作った科学研究所が隠されているこのミステリアスアイランドでは、
+<br>人々が不可能と考えていたことを可能にする様々な開発が行われています。 
+<br>ネモ船長が開発した地底走行車や小型潜水艇で神秘的な未知の世界へ冒険にでかけましょう。
+</div>
+
+<div class="foods-container-mystery">
+  <% @foods.each do |t| %>
+    <% if t.area == "ミステリアスアイランド" %>
+        <div class="tweet-mystery">
+          <div class = "image-mystery">
+            <%= image_tag t.image_url, size: "350x250" if t.image? %><br>
+          </div>
+          <div class="shop-mystery">
+            </b> <%= t.name %><br>
+          </div>
+          <div class="genre-mystery">
+            </b> <%= t.genre %><br> 
+      </div>
+        
+        <div class="button-mystery">
+          <%= button_to ">詳細へ", food_path(t.id), method: :get, class: :"show-mystery"%>
+          <p>
+          <% if user_signed_in? %>
+            <% if current_user.already_liked?(t) %>
+            <%= link_to food_like_path(id: t.id, food_id: t.id), method: :delete do %>
+              <i class="fas fa-heart fa-2x" style="color:#f5b2b2;"></i>
+              <div class ="like-mystery">
+              <%= t.likes.count %>
+              </div>
+            <% end %>
+            <% else %>
+              <%= link_to food_likes_path(id: t.id, food_id: t.id), method: :food do %>
+                <i class="far fa-heart fa-2x"></i>
+                <div class ="like-mystery">
+              <%= t.likes.count %>
+              </div>
+              <% end %>
+            <% end %>
+          <% else %>
+            <i class="far fa-heart"></i><%= t.likes.count %>
+          <% end %>
+        </p>
+          <% if user_signed_in? && current_user.id == t.user_id %>
+            <%= button_to "編集する", edit_food_path(t.id), method: :get %>
+            <%= button_to "削除する", food_path(t.id), method: :delete %>
+            <% end %>
+            </div>  
+      </div>
+    <% end %>
+  <% end %>
+</div>
+
+<button type="button" onclick="history.back()"><戻る</button>
 <%= link_to "新規投稿へ", new_food_path %>
+</body>

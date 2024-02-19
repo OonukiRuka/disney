@@ -1,36 +1,63 @@
-<h1>Disney sea food紹介</h1>
-<h3>ポートディスカバリー</h3>
-<div class="tweets-container">
-  <% @foods.each do |t| %>
-    <div class="tweet">
-    <% if t.area == "port"%>
-    <%= image_tag t.image_url, size: "250x200" if t.image? %><br>
-    <p><%= t.name %></p>
-    <p><%= t.genre %></p>
-    <p>
-    <% if user_signed_in? %>
-    <% if current_user.already_liked?(t) %>
-        <%= link_to food_like_path(id: t.id, food_id: t.id), method: :delete do %>
-          <i class="fas fa-heart"></i><%= t.likes.count %>
-        <% end %>
-    <% else %>
-        <%= link_to food_likes_path(id: t.id, food_id: t.id), method: :food do %>
-          <i class="far fa-heart"></i><%= t.likes.count %>
-        <% end %>
-    <% end %>
-  <% else %>
-      <i class="far fa-heart"></i><%= t.likes.count %>
-  <% end %>
-    </p>
-    <%= link_to "詳細へ", food_path(t.id) %>
-    <% if user_signed_in? && current_user.id == t.user_id %>
-        <%= link_to "編集する", edit_food_path(t.id) %>
-        <%= button_to "削除する", food_path(t.id), method: :delete %>
-        
-    <% end %>  
-    </div>
-  <% end %>
-<% end %>
+<body>
+<div class="bg-port">
+  <div class="title-port">
+    ポートディスカバリー
+  </div>
 </div>
-<%= link_to "Back", foods_place_path %>
+
+<div class="about-port">
+時空を超えた未来のマリーナをイメージしたポートディスカバリー。
+<br>ここは自然と科学が調和した素晴らしい未来の世界を体験できます。 
+<br>予想もつかない動きをするウォーターヴィークルや空想未来的な建築様式など、全く新しい世界が広がっています。
+
+</div>
+
+<div class="foods-container-port">
+  <% @foods.each do |t| %>
+    <% if t.area == "ポートディスカバリー" %>
+        <div class="tweet-port">
+          <div class = "image-port">
+            <%= image_tag t.image_url, size: "350x250" if t.image? %><br>
+          </div>
+          <div class="shop-port">
+            </b> <%= t.name %><br>
+          </div>
+          <div class="genre-port">
+            </b> <%= t.genre %><br> 
+      </div>
+        
+        <div class="button-port">
+          <%= button_to ">詳細へ", food_path(t.id), method: :get, class: :"show-port"%>
+          <p>
+          <% if user_signed_in? %>
+            <% if current_user.already_liked?(t) %>
+            <%= link_to food_like_path(id: t.id, food_id: t.id), method: :delete do %>
+              <i class="fas fa-heart fa-2x" style="color:#f5b2b2;"></i>
+              <div class ="like-port">
+              <%= t.likes.count %>
+              </div>
+            <% end %>
+            <% else %>
+              <%= link_to food_likes_path(id: t.id, food_id: t.id), method: :food do %>
+                <i class="far fa-heart fa-2x"></i>
+                <div class ="like-port">
+              <%= t.likes.count %>
+              </div>
+              <% end %>
+            <% end %>
+          <% else %>
+            <i class="far fa-heart"></i><%= t.likes.count %>
+          <% end %>
+        </p>
+          <% if user_signed_in? && current_user.id == t.user_id %>
+            <%= button_to "編集する", edit_food_path(t.id), method: :get %>
+            <%= button_to "削除する", food_path(t.id), method: :delete %>
+            <% end %>
+            </div>  
+      </div>
+    <% end %>
+  <% end %>
+</div>
+<button type="button" onclick="history.back()"><戻る</button>
 <%= link_to "新規投稿へ", new_food_path %>
+</body>

@@ -1,19 +1,20 @@
+<body>
 <div class="bg">
-<div class="about">
-    このサイトでは、ディズニーシーパーク内の
-    <br>魅力あふれるフードを紹介していきます！
-    <br>パークを訪れた際にありがちな
-    <br>どこに何があるのかわからない、、、
-    <br>一覧でフードを見たい、、、
-    <br>などのお悩みを持つ方へ
-    <br>エリア、メニューごとに一覧でフードを紹介するサイトです✨
-</div>
+    <div class="about">
+        このサイトでは、ディズニーシーパーク内の
+        <br>魅力あふれるフードを紹介していきます！
+        <br>パークを訪れた際にありがちな
+        <br>どこに何があるのかわからない、、、
+        <br>一覧でフードを見たい、、、
+        <br>などのお悩みを持つ方へ
+        <br>エリア、メニューごとに一覧でフードを紹介するサイトです✨
+    </div>
 </div>
 
-<div class="area">
-<div class="border1">
-エリアで調べる🎠
-</div>
+<ul id="2" class="area">
+    <div class="border1">
+        Area list
+    </div>
 </div>
 
 <div class="map">
@@ -26,78 +27,65 @@
 <%= button_to "ミステリアスアイランド", foods_mystery_path, method: :get, class:"mystery" %>
 </div>
 
-<div class="menu">
-<div class="border2">
-メニューで調べる🍴
-</div>
+<ul id="3" class="menu">
+    <div class="border2">
+        Menu list
+    </div>
 </div>
 <div class="box1">
-<div class="niku">
-    <%= button_to "肉料理", foods_niku_path, method: :get, class:"t-niku" %>
-</div>
+    <div class="niku">
+        <%= button_to "肉料理", foods_niku_path, method: :get, class:"t-niku" %>
+    </div>
 
-<div class="sakana">
-    <%= button_to "魚料理", foods_sakana_path, method: :get, class:"t-sakana" %>
-</div>
+    <div class="sakana">
+        <%= button_to "魚料理", foods_sakana_path, method: :get, class:"t-sakana" %>
+    </div>
 
-<div class="pasta">
-    <%= button_to "パスタ", foods_pasta_path, method: :get, class:"t-pasta" %>
-</div>
+    <div class="pasta">
+        <%= button_to "パスタ", foods_pasta_path, method: :get, class:"t-pasta" %>
+    </div>
 </div>
 
 <div class="box2">
-<div class="burger">
-    <%= button_to "サンドウィッチ/ハンバーガー", foods_burger_path, method: :get, class:"t-burger" %>
-</div>
+    <div class="burger">
+        <%= button_to "サンドウィッチ/ハンバーガー", foods_burger_path, method: :get, class:"t-burger" %>
+    </div>
 
-<div class="bread">
-    <%= button_to "パン/ペイストリー", foods_bread_path, method: :get, class:"t-bread" %>
-</div>
+    <div class="bread">
+        <%= button_to "パン/ペイストリー", foods_bread_path, method: :get, class:"t-bread" %>
+    </div>
 
-<div class="curry">
-    <%= button_to "カレー", foods_curry_path, method: :get, class:"t-curry" %>
-</div>
+    <div class="curry">
+        <%= button_to "カレー", foods_curry_path, method: :get, class:"t-curry" %>
+    </div>
 </div>
 
 <div class="box3">
-<div class="pizza">
-    <%= button_to "ピザ", foods_pizza_path, method: :get, class:"t-pizza" %>
-</div>
+    <div class="pizza">
+        <%= button_to "ピザ", foods_pizza_path, method: :get, class:"t-pizza" %>
+    </div>
 
-<div class="hand">
-    <%= button_to "ワンハンドメニュー", foods_hand_path, method: :get, class:"t-hand" %>
-</div>
+    <div class="hand">
+        <%= button_to "ワンハンドメニュー", foods_hand_path, method: :get, class:"t-hand" %>
+    </div>
 
-<div class="pop">
-    <%= button_to "ポップコーン", foods_pop_path, method: :get, class:"t-pop" %>
-</div>
+    <div class="pop">
+        <%= button_to "ポップコーン", foods_pop_path, method: :get, class:"t-pop" %>
+    </div>
 </div>
 
 <div class="box4">
-<div class="sweets">
-    <%= button_to "スウィーツ", foods_sweets_path, method: :get, class:"t-sweets" %>
+    <div class="sweets">
+        <%= button_to "スウィーツ", foods_sweets_path, method: :get, class:"t-sweets" %>
+    </div>
+
+    <div class="ice">
+        <%= button_to "アイスクリーム", foods_ice_path, method: :get, class:"t-ice" %>
+    </div>
+
+    <div class="alcohol">
+        <%= button_to "アルコール", foods_alcohol_path, method: :get, class:"t-alcohol" %>
+    </div>
 </div>
 
-<div class="ice">
-    <%= button_to "アイスクリーム", foods_ice_path, method: :get, class:"t-ice" %>
-</div>
-
-<div class="alcohol">
-    <%= button_to "アルコール", foods_alcohol_path, method: :get, class:"t-alcohol" %>
-</div>
-</div>
-
-<% if user_signed_in? %>
-  <%= button_to "ログアウト", destroy_user_session_path, method: :delete %>          
-  <% else %>
-  <%= link_to "ログイン", foods_path %>
-  <%= link_to "新規登録", new_user_registration_path %>
-<% end %>  
-</div>
-
-
-<div>
-一覧へ
-<%= link_to "場所", foods_place_path %>
-<%= link_to "メニュー", foods_menu_path %>
-</div>
+</body>

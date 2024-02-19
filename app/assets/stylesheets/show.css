@@ -1,0 +1,88 @@
+.image-show{
+    display:flex;
+    margin-left:3%;
+}
+
+.text-show{
+    margin-left:3%;
+    background-color: #E0CAB0;
+    padding:2%;
+    margin-right:3%;
+}
+
+.shop-show{
+    font-size: 28px;
+    border-bottom: 2px solid black;
+}
+
+.about-show{
+    padding:1%;
+    font-size: 20px;
+}
+
+.about-show p{
+    font-family: "Zen Antique Soft", serif;
+    font-weight: 200;
+    font-style: normal;
+    font-size:25px;
+}
+
+.tweet-show{
+    border: 1px solid rgba(160, 157, 157, 0.77);
+    width:350px;
+    flex-wrap: wrap;
+    margin:60px;
+    flex-direction: row;
+    padding: 8px;
+    height:380px;
+}
+
+.commentbox{
+    display:flex;
+}
+
+.comment{
+    margin-top:1%;
+    margin-left:3%;
+    margin-right:3%;
+    height:250px;
+    width:50%;
+    background-color: #254f4634;
+}
+
+.comment-wrapper{
+    margin-top:1%;
+    margin-right:3%;
+    height:250px;
+    width:42%;
+    background-color: #9f9d9d4f;
+}
+
+.come{
+    font-size:16px;
+    background-color: #254f4600;
+    border: 1px solid black;
+    margin-left:79%;
+}
+
+.form-control{
+    margin:2%;
+}
+
+button{
+    font-size:20px;
+    margin:5px;
+    width:5%;
+    background:#ffff ; /* 背景色 */
+    border: 2px solid #06a2b3dc;
+    color: #06a2b3dc; /* 文字色 */
+    text-decoration: none;
+    transition-duration: 0.3s;
+    padding:2px;
+}
+
+button:hover{
+    margin:5px;
+    background: #06a2b3dc; /* 背景色 */
+    color: #ffff; /* 文字色 */
+}

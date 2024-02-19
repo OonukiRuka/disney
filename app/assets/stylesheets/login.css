@@ -1,0 +1,44 @@
+.about-site{
+    text-align: center;
+}
+
+h2{
+    font-size:20px;
+    font-weight: lighter;
+}
+
+h2{
+    font-size:30px;
+    text-align: center;
+}
+
+.field{
+    font-size: 30px;
+    text-align: center;
+}
+
+.field{
+    font-size: 30px;
+    text-align: center;
+}
+
+.field{
+    font-size: 20px;
+    text-align: center;  
+} 
+
+.actions{
+    text-align: center;
+}
+
+.box{
+    font-family: "Zen Antique Soft", serif;
+    font-weight: 200;
+    font-style: normal;
+    text-align: center;
+    margin:0 auto;
+    margin-top:30px;
+    height:300px;
+    width:400px;
+    background-color: rgba(250, 235, 215, 0.49);
+}

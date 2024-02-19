@@ -1,40 +1,33 @@
-<h3>詳細</h3>
-<div class="food">
-  <p><%= @food.about %></p>
-  <% if user_signed_in? %>
-  <% if current_user.already_liked?(@food) %>
-    <%= link_to food_like_path(@food), method: :delete do %>
-      <p>いいねを取り消す</p><%= @food.likes.count %>
-    <% end %>
-  <% else %>
-    <%= link_to food_likes_path(@food), method: :post do %>
-      <p>いいね</p><%= @food.likes.count %>
-    <% end %>
-  <% end %>
-<% else %>
-  <p>いいねの数 = </p><%= @food.likes.count %>
-<% end %>
-<%= flash[:notice] %>
+  <div class="image-show">
+    <%= image_tag @food.image_url, size: "550x350" if @food.image? %>
+      <div class="text-show">
+        <div class="shop-show">
+          <%= @food.name %>
+        </div>
+        <div class="about-show"> 
+          <p>Menu</p>
+          <%= @food.about %>
+        </div>
+      </div>
+    </div>      
+  </div>
 
-<div class="comment-wrapper">
-  <p>コメント一覧</p>
-  <% @comments.each do |c| %>
-    <div>
-      <%= c.user.email unless c.user.blank? %>
-      <br>
-      <%= c.content %>
-    </div>
-      <br>
-  <% end %>
-
-  <% if user_signed_in? %>
-    <%= form_with(model: [@food, @comment], local: true) do |f| %>
-      <%= f.text_area :content %>
-      <%= button_tag type: "submit" do %>
-        <i class="far fa-comments"></i> コメントする
+<div class="commentbox">
+  <div class="comment">
+    <% @comments.each do |c| %>
+        <%= c.content %><br>
+    <% end %>
+  </div>
+  <div class="comment-wrapper">
+    <% if user_signed_in? %>
+      <%= form_with(model: [@food, @comment], local: true) do |f| %>
+        <%= f.text_area :content, class: "form-control", style: "width:96%", rows: "14"%>
+        <%= button_tag type: "submit", class: "come" do %>
+          <i class="far fa-comments" >
+          </i> コメントする
+        <% end %>
       <% end %>
-    <% end %>
-  <% end %>
+    <% end %> 
+  </div>
 </div>
-
-<%= link_to "一覧に戻る", foods_path %>
+<button type="button" onclick="history.back()"><戻る</button>

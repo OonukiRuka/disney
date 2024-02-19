@@ -1,57 +1,26 @@
-body{
-    background-color:   #fafafa;
-    animation: fadein 3s forwards;
-}
-.bg-medi {
-    background-image: url("medi.jpg");
-    background-size: cover;
-    height: 800px;
-    width: 1450px;
-    margin: auto;
-}
-
-.about-medi{
-    margin-top: 50px;
-    text-align: center;
-    font-size: 28px;
-    font-family:'Noto Sans JP', sans-serif;
-    color:black;
-    justify-content: center;
-}
-
-.title-medi{	
-	vertical-align: middle;
-	margin: auto;
-	padding: 10px;
-	color: #ffff;
-    font-size: 70px;
-    display: flex;
-    text-shadow:2px 2px 3px #945a30ca;
-}
-
-.foods-container-medi{
+.foods-container-menu{
     margin-top:30px;
     display: flex;
     flex-wrap: wrap; 
     justify-content: space-around;
 }
 
-.image-medi{
+.image-menu{
     justify-content: center;
     box-shadow: 0 0 30px #ccc ;
     height: 250px;
 }
 
-.shop-medi{
+.shop-menu{
     font-size: 18px;
     border-bottom: 1px solid rgba(160, 157, 157, 0.77);
 }
 
-.genre-medi{
+.genre-menu{
     font-size: 15px;
 }
 
-.tweet-medi{
+.tweet-menu{
     border: 1px solid rgba(160, 157, 157, 0.77);
     width:350px;
     flex-wrap: wrap;
@@ -61,35 +30,30 @@ body{
     height:380px;
 }
 
-.show-medi{
-    margin-right:8px;
+.show-menu{
+    margin:5px;
     display: inline-block;
     position: relative;
     background:#ffff ; /* 背景色 */
-    border: 2px solid #4D9BC1;
-    color: #4D9BC1; /* 文字色 */
+    border: 2px solid #06a2b3dc;
+    color: #06a2b3dc; /* 文字色 */
     text-decoration: none;
     transition-duration: 0.3s;
     padding:2px;
     font-size:15px;
 }
 
-.show-medi:hover {
-    margin-right:8px;
+.show-menu:hover {
+    margin:5px;
     background: #4d9ac1ba; /* 背景色 */
     color: #ffff; /* 文字色 */
   }
 
-.button-medi{
+.button-menu{
     display:flex;
-    text-decoration: none;
 }
 
-a{
-    text-decoration: none; 
-}
-
-.like-medi{
+.like-menu{
     color: black;
     font-size: 20px;
     text-decoration: none;

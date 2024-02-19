@@ -3,7 +3,7 @@
 
 <div class="tweets-container">
   <% @foods.each do |t| %>
-    <% if t.area == "medi" %>
+    <% if t.area == "メディテレーニアンハーバー" %>
     <%= t.name %><br>
     <%= t.genre %><br>
     <% if user_signed_in? %>
@@ -30,5 +30,5 @@
 <% end %>
 <% end %>
 </div>
-<%= link_to "Back", foods_place_path %>
+<button type="button" onclick="history.back()"><戻る</button>
 <%= link_to "新規投稿へ", new_food_path %>
