@@ -16,6 +16,7 @@
 }
 
 .about-show{
+    width:810px;
     padding:1%;
     font-size: 20px;
 }
@@ -42,12 +43,14 @@
 }
 
 .comment{
+    font-size: 15px;
     margin-top:1%;
     margin-left:3%;
     margin-right:3%;
-    height:250px;
+    height:238px;
     width:50%;
     background-color: #254f4634;
+    padding:6px;
 }
 
 .comment-wrapper{
@@ -58,20 +61,31 @@
     background-color: #9f9d9d4f;
 }
 
-.come{
+button.come{
+    margin-top:1%;
     font-size:16px;
     background-color: #254f4600;
     border: 1px solid black;
-    margin-left:79%;
+    margin-left:78%;
+    border-radius: 100vh;
+    padding:3px;
 }
 
-.form-control{
-    margin:2%;
+.comment-wrapper .form-control{
+    margin-top:2%;
+    margin-right:2%;
+    margin-left:2%;
+    background-color: #ffff;
+    border:2px solid black;
+    padding:2%;
+    font-size: 15px;
+    height:92%;
+    width:92%;
 }
 
-button{
+.all-button button{
     font-size:20px;
-    margin:5px;
+    margin:15px;
     width:5%;
     background:#ffff ; /* 背景色 */
     border: 2px solid #06a2b3dc;
@@ -79,10 +93,11 @@ button{
     text-decoration: none;
     transition-duration: 0.3s;
     padding:2px;
+    border-radius: 100vh;
 }
 
-button:hover{
-    margin:5px;
+.all-button button:hover{
+    margin:15px;
     background: #06a2b3dc; /* 背景色 */
     color: #ffff; /* 文字色 */
 }

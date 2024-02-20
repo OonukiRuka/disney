@@ -1,16 +1,16 @@
-  <div class="image-show">
-    <%= image_tag @food.image_url, size: "550x350" if @food.image? %>
-      <div class="text-show">
-        <div class="shop-show">
-          <%= @food.name %>
-        </div>
-        <div class="about-show"> 
-          <p>Menu</p>
-          <%= @food.about %>
-        </div>
+<div class="image-show">
+  <%= image_tag @food.image_url, size: "550x350" if @food.image? %>
+    <div class="text-show">
+      <div class="shop-show">
+        <%= @food.name %>
       </div>
-    </div>      
-  </div>
+      <div class="about-show"> 
+        <p>Menu</p>
+        <%= @food.about %>
+      </div>
+    </div>
+  </div>      
+</div>
 
 <div class="commentbox">
   <div class="comment">
@@ -21,13 +21,16 @@
   <div class="comment-wrapper">
     <% if user_signed_in? %>
       <%= form_with(model: [@food, @comment], local: true) do |f| %>
-        <%= f.text_area :content, class: "form-control", style: "width:96%", rows: "14"%>
-        <%= button_tag type: "submit", class: "come" do %>
-          <i class="far fa-comments" >
-          </i> コメントする
-        <% end %>
+        <%= f.text_area :content, class: "form-control", rows: "10"%>
+          <%= button_tag type: "submit", class: 'come' do %>
+            <i class="far fa-comments" >
+            </i> コメントする
+          <% end %>
+
       <% end %>
     <% end %> 
   </div>
 </div>
+<div class="all-button">
 <button type="button" onclick="history.back()"><戻る</button>
+</div>

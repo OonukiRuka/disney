@@ -34,8 +34,8 @@
     background-color: white;
     background-image: url("map.png");
     background-size: cover;
-    height: 800px;
-    width: 1137px;
+    height: 870px;
+    width: 1250px;
     margin: auto;
     position:relative;
     overflow: hidden;
@@ -53,8 +53,8 @@
 
 .medi {
     position: absolute;
-    top:550px;
-    left:400px;
+    top:580px;
+    left:460px;
 	display: flex;
     display: inline-block;
 	text-align: center;
@@ -127,8 +127,8 @@
 }
 .lost {
     position: absolute;
-    top:50px;
-    left: 800px;
+    top:30px;
+    left: 830px;
 	display: flex;
     display: inline-block;
 	text-align: center;
@@ -151,8 +151,8 @@
 }
 .arab {
     position: absolute;
-    top: 320px;
-    left: 880px;
+    top: 310px;
+    left: 990px;
 	display: flex;
     display: inline-block;
 	text-align: center;
@@ -177,8 +177,8 @@
 }
 .mermaid {
     position: absolute;
-    top: 230px;
-    left: 650px;
+    top: 240px;
+    left: 700px;
 	display: flex;
     display: inline-block;
 	text-align: center;
@@ -202,7 +202,7 @@
 
 .mystery {
     position: absolute;
-    top: 330px;
+    top: 380px;
     left: 500px;
 	display: flex;
     display: inline-block;

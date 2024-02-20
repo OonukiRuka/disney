@@ -71,6 +71,7 @@ body{
     transition-duration: 0.3s;
     padding:2px;
     font-size:15px;
+    border-radius: 100vh;
 }
 
 .show-lost:hover {
@@ -89,20 +90,3 @@ body{
     text-decoration: none;
 }
 
-button{
-    font-size:20px;
-    margin:5px;
-    width:5%;
-    background:#ffff ; /* 背景色 */
-    border: 2px solid #06a2b3dc;
-    color: #06a2b3dc; /* 文字色 */
-    text-decoration: none;
-    transition-duration: 0.3s;
-    padding:2px;
-}
-
-button:hover{
-    margin:5px;
-    background: #06a2b3dc; /* 背景色 */
-    color: #ffff; /* 文字色 */
-}
