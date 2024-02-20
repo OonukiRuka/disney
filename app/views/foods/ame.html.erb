@@ -50,11 +50,10 @@
         <i class="far fa-heart"></i><%= t.likes.count %>
     <% end %>
     </p>
+        <% if user_signed_in? && current_user.id == t.user_id %>
           <%= button_to "編集する", edit_food_path(t.id), method: :get %>
           <%= button_to "削除する", food_path(t.id), method: :delete %>
-          <%= link_to "新規投稿へ", new_food_path %>
-          <% end %>
-          </div>  
+        <% end %> 
     </div>
   <% end %>
 <% end %>
@@ -62,6 +61,6 @@
 <div class="all-button">
   <button type="button" onclick="history.back()"><戻る</button>
 </div>
-  
+
 
 </body>

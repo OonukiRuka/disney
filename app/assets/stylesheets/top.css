@@ -692,3 +692,8 @@
 	color: black;
     background-color: #ffffffbe;
 }
+
+.himitu{
+    text-align: center;  
+    opacity: 0;  
+}

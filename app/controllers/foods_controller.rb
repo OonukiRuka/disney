@@ -55,6 +55,7 @@ class FoodsController < ApplicationController
       end
 
       def top
+        @foods = Food.all
       end
 
       def place
